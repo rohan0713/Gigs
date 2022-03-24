@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:theme="@style/Theme.Gigs">
+
+    <RelativeLayout
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="?attr/actionBarSize">
+
+        <RelativeLayout
+            android:id="@+id/gigs1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/synth_color"
+            android:clipChildren="false">
+
+            <club.cred.synth.views.ElevatedView
+                android:id="@+id/elevated1"
+                android:layout_width="170dp"
+                android:layout_height="180dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="20dp"/>
+
+            <TextView
+                android:id="@+id/demat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="65dp"
+                android:layout_marginTop="65dp"
+                android:text="DEMAT"
+                android:textColor="@color/copper_text_color"
+                android:textSize="20sp" />
+
+            <club.cred.synth.views.SynthButton
+                android:id="@+id/demat_button"
+                android:layout_width="100dp"
+                android:layout_height="46dp"
+                android:layout_below="@id/demat"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="40dp"
+                android:gravity="center"
+                android:text="check now"
+                android:textColor="@color/white" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/gigs2"
+            android:layout_toEndOf="@id/gigs1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipChildren="false"
+            android:background="@color/synth_color">
+
+            <club.cred.synth.views.ElevatedView
+                android:id="@+id/elevated2"
+                android:layout_width="170dp"
+                android:layout_height="180dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="20dp"/>
+
+            <TextView
+                android:id="@+id/savings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="55dp"
+                android:layout_marginTop="65dp"
+                android:text="SAVINGS"
+                android:textColor="@color/copper_text_color"
+                android:textSize="20sp" />
+
+            <club.cred.synth.views.SynthButton
+                android:id="@+id/savings_button"
+                android:layout_width="100dp"
+                android:layout_height="46dp"
+                android:layout_below="@id/savings"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="40dp"
+                android:gravity="center"
+                android:text="check now"
+                android:textColor="@color/white" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/gigs3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/gigs1"
+            android:background="@color/synth_color"
+            android:clipChildren="false">
+
+            <club.cred.synth.views.ElevatedView
+                android:id="@+id/elevated3"
+                android:layout_width="170dp"
+                android:layout_height="180dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="20dp" />
+
+            <TextView
+                android:id="@+id/credit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="65dp"
+                android:layout_marginTop="65dp"
+                android:text="CREDIT"
+                android:textColor="@color/copper_text_color"
+                android:textSize="20sp" />
+
+            <club.cred.synth.views.SynthButton
+                android:id="@+id/credit_button"
+                android:layout_width="100dp"
+                android:layout_height="46dp"
+                android:layout_below="@id/credit"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="40dp"
+                android:gravity="center"
+                android:text="check now"
+                android:textColor="@color/white" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/gigs4"
+            android:layout_toEndOf="@id/gigs3"
+            android:layout_below="@id/gigs2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clipChildren="false"
+            android:background="@color/synth_color">
+
+            <club.cred.synth.views.ElevatedView
+                android:id="@+id/elevated4"
+                android:layout_width="170dp"
+                android:layout_height="180dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="20dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ITR TAX"
+                android:id="@+id/tax"
+                android:textColor="@color/copper_text_color"
+                android:textSize="20sp"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="65dp"/>
+
+            <club.cred.synth.views.SynthButton
+                android:id="@+id/itr_button"
+                android:layout_width="100dp"
+                android:layout_height="46dp"
+                android:layout_below="@id/tax"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="40dp"
+                android:gravity="center"
+                android:text="check now"
+                android:textColor="@color/white" />
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

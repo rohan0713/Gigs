@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".kyc_Screen"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:clipChildren="false">
+
+        <TextView
+            android:id="@+id/kycText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="GET YOUR KYC COMPLETED"
+            android:textColor="@color/synth_color" />
+
+        <ImageView
+            android:id="@+id/next_to_home"
+            android:layout_width="40dp"
+            android:layout_height="18dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="35dp"
+            android:rotation="180"
+            android:src="@drawable/ic_chevron_left"
+            app:tint="@color/synth_color" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/kycText"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="Aadhar ID Number"
+            android:textColor="@color/synth_color"
+            android:textSize="17sp" />
+
+        <club.cred.synth.views.SynthButton
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_below="@id/next_to_home"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="38dp"
+            android:layout_marginEnd="35dp"
+            android:elevation="8dp"
+            android:gravity="center"
+            android:text="Submit"
+            android:textColor="@color/copper_text_color"
+            android:textSize="12sp"
+            app:cornerRadius="40dp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/aadhar_card"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/background_aadhar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout1"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/flag"
+                android:layout_width="150dp"
+                android:layout_height="85dp"
+                android:paddingEnd="60dp"
+                android:src="@drawable/flag" />
+
+            <ImageView
+                android:layout_width="110dp"
+                android:layout_height="45dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/aadhar_logo" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/aadhar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/flag"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/white">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/aadhar_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:inputType="number">
+
+                </com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/nameText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/aadhar_layout"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:text="FULL NAME"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/aadhar_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/nameText"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:text="Rohan Ramola"
+                android:textColor="@color/synth_color" />
+
+            <TextView
+                android:id="@+id/addressText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/aadhar_name"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:text="PERMANENT ADDRESS"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/addressText"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Central Delhi, Delhi - 110008"
+                android:textColor="@color/synth_color" />
+
+            <TextView
+                android:id="@+id/dobText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/aadhar_layout"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:gravity="end"
+                android:text="Date of Birth"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/dob"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/dobText"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:gravity="end"
+                android:text="12-11-1997"
+                android:textColor="@color/synth_color" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:clipChildren="false"
+        app:layout_constraintTop_toBottomOf="@id/aadhar_card">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="PAN Details"
+            android:textColor="@color/synth_color"
+            android:textSize="17sp" />
+
+        <club.cred.synth.views.SynthButton
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="35dp"
+            android:elevation="8dp"
+            android:gravity="center"
+            android:text="Submit"
+            android:textColor="@color/copper_text_color"
+            android:textSize="12sp"
+            app:cornerRadius="40dp" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/pan_card"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/background_pan"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout2"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/verifyText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="VERIFY PAN DETAILS"
+                android:layout_margin="10dp"/>
+
+            <ImageView
+                android:id="@+id/pan_symbol"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/pan_logo"
+                app:tint="#90BEE7" />
+
+            <TextView
+                android:id="@+id/panText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/verifyText"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="5dp"
+                android:text="PAN NUMBER"
+                android:textSize="12sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/panLayout"
+                android:layout_width="160dp"
+                android:layout_height="45dp"
+                android:layout_below="@id/panText"
+                android:layout_marginStart="10dp"
+                android:background="@color/white">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/panNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/panDOB"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/pan_symbol"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="2dp"
+                android:gravity="start"
+                android:text="Date of Birth" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/pan_DOB"
+                android:layout_width="150dp"
+                android:layout_height="45dp"
+                android:layout_below="@id/panDOB"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="15dp"
+                android:background="@color/white">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="150dp"
+                    android:layout_height="45dp">
+
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/namePan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/panLayout"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="5dp"
+                android:textSize="12sp"
+                android:text="NAME AS ON PAN CARD" />
+
+            <TextView
+                android:layout_below="@id/namePan"
+                android:layout_marginStart="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ROHAN RAMOLA"
+                android:textSize="16sp"
+                android:textColor="@color/synth_color"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_below="@id/pan_DOB"
+                android:layout_alignParentEnd="true"
+                app:cardCornerRadius="6dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="30dp"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:backgroundTint="#C6E0F7"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

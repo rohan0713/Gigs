@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".login_page"
+    android:clipChildren="false"
+    android:background="@color/white">
+
+
+    <FrameLayout
+        android:id="@+id/frame_layout"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="380dp">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="370dp"
+            android:background="@color/synth_color">
+        </ImageView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/earn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="35dp"
+                android:text="Earning by Selling"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <com.example.gigs.TypeWriter
+                android:id="@+id/animatedText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/earn"
+                android:layout_marginStart="35dp"
+                android:fontFamily="@font/alatsi"
+                android:text="Saving Accounts"
+                android:textColor="@color/copper_text_color"
+                android:textSize="34sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_height="90dp"
+                android:layout_marginTop="80dp"
+                android:layout_marginBottom="0dp"
+                android:src="@drawable/ic_wave" />
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="35dp"
+        android:text="Mobile Number is\nRequired to Continue"
+        android:textColor="@color/synth_color"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/frame_layout" />
+
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="5dp"
+        android:text="Login using the verification code\nrecieved on your phone and it is done!"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text1" />
+
+    <EditText
+        android:id="@+id/mobile_number"
+        android:inputType="phone"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:importantForAutofill="no"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="15dp"
+        android:drawableStart="@drawable/phone"
+        android:drawablePadding="20dp"
+        android:cursorVisible="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text2" >
+        <requestFocus/>
+    </EditText>
+
+    <club.cred.synth.views.SynthButton
+        android:id="@+id/proceed"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="5dp"
+        app:layout_constraintStart_toEndOf="@id/mobile_number"
+        app:layout_constraintTop_toBottomOf="@id/text2"
+        app:neuButtonType="elevated_soft"
+        android:text="Confirm"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:textColor="@color/copper_text_color"
+
+        app:neuPlatformAppearance="@style/elevatedFlat_blueButton"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

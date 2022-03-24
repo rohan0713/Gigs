@@ -1,0 +1,68 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Gigs" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">#737171</item>
+        <item name="colorPrimaryVariant">#030303</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/synth_color</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="MyAlertDialogTheme" parent="Base.Theme.AppCompat.Light.Dialog.Alert">
+        <item name="windowFixedWidthMajor">90%</item>
+        <item name="windowFixedWidthMinor">90%</item>
+    </style>
+
+    <style name="Theme.Synth" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/synth_color</item>
+        <item name="colorPrimaryDark">@color/synth_color</item>
+        <item name="android:statusBarColor">@color/synth_color</item>
+        <item name="android:navigationBarColor">@color/synth_color</item>
+        <item name="android:windowBackground">@color/synth_color</item>
+        <item name="neuFlatButtonAppearance">@style/elevatedFlat_blueButton</item>
+        <item name="dividerAppearance">@style/neuWhiteDivider</item>
+    </style>
+
+    <style name="Theme.Synth.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.Synth.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.Synth.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="elevatedFlat_blueButton">
+        <item name="neuButtonStartColor">#FF426bb6</item>
+        <item name="neuButtonEndColor">#FF26458c</item>
+        <item name="neuButtonBorder1StartColor">#FF5679c4</item>
+        <item name="neuButtonBorder1EndColor">#FF1b2d5b</item>
+        <item name="neuButtonBorder2StartColor">#FF366BD1</item>
+        <item name="neuButtonBorder2EndColor">#FF18263E</item>
+        <item name="neuButtonPressedDarkShadowColor">#80000000</item>
+    </style>
+
+    <style name="neuWhiteDivider">
+        <item name="neuDividerStartColor">#FF212426</item>
+        <item name="neuDividerMiddleColor">#FF2e3234</item>
+        <item name="neuDividerEndColor">#FF212426</item>
+    </style>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
+    ...
+    <item name="pinViewStyle">@style/PinWidget.PinView</item>
+</style>
+
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/bottom_to_top</item>
+        <item name="android:windowExitAnimation">@anim/top_to_bottom</item>
+    </style>
+
+
+    </resources>
