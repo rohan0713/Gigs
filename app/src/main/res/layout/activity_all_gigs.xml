@@ -17,7 +17,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/profile"
+            android:id="@+id/back"
             android:layout_width="30dp"
             android:layout_height="40dp"
             android:layout_centerVertical="true"
@@ -33,21 +33,12 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginStart="25dp"
-            android:layout_toEndOf="@id/profile"
+            android:layout_toEndOf="@id/back"
             android:fontFamily="sans-serif"
             android:text="Demat Account"
             android:textColor="@color/copper_text_color"
             android:textSize="24sp" />
 
-
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="40dp"
-            android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true"
-            android:layout_marginEnd="15dp"
-            android:src="@drawable/notification"
-            app:tint="#ba8672" />
     </RelativeLayout>
 
     <androidx.recyclerview.widget.RecyclerView

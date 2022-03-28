@@ -30,10 +30,9 @@
             android:layout_width="40dp"
             android:layout_height="18dp"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="18dp"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="35dp"
-            android:rotation="180"
-            android:src="@drawable/ic_chevron_left"
+            android:src="@drawable/arrow_forward"
             app:tint="@color/synth_color" />
 
         <TextView
@@ -53,7 +52,7 @@
             android:layout_height="30dp"
             android:layout_below="@id/next_to_home"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="38dp"
+            android:layout_marginTop="45dp"
             android:layout_marginEnd="35dp"
             android:elevation="8dp"
             android:gravity="center"
@@ -107,7 +106,8 @@
                     android:id="@+id/aadhar_number"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:inputType="number">
+                    android:inputType="number"
+                    android:maxLines="1">
 
                 </com.google.android.material.textfield.TextInputEditText>
 
@@ -270,10 +270,12 @@
                 android:layout_below="@id/panText"
                 android:layout_marginStart="10dp"
                 android:background="@color/white">
+
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/panNumber"
                     android:layout_width="match_parent"
-                    android:layout_height="45dp"/>
+                    android:layout_height="45dp"
+                    android:maxLines="1" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -299,7 +301,9 @@
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="150dp"
-                    android:layout_height="45dp">
+                    android:layout_height="45dp"
+                    android:inputType="date"
+                    android:maxLines="1">
 
                 </com.google.android.material.textfield.TextInputEditText>
             </com.google.android.material.textfield.TextInputLayout>

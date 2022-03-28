@@ -99,6 +99,7 @@
             android:clipChildren="false">
 
             <club.cred.synth.views.ElevatedView
+                android:id="@+id/sNe"
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
                 android:layout_marginStart="20dp"
@@ -112,7 +113,7 @@
                 android:layout_marginStart="50dp"
                 android:layout_marginTop="35dp"
                 android:layout_marginBottom="20dp"
-                android:text="Sell &amp; Earn"
+                android:text="Share &amp; Earn"
                 android:textColor="@color/white"
                 android:textSize="16sp" />
 
@@ -120,8 +121,8 @@
                 android:layout_width="14dp"
                 android:layout_height="18dp"
                 android:layout_alignParentEnd="true"
-                android:layout_marginTop="34dp"
-                android:layout_marginEnd="30dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="40dp"
                 android:layout_marginBottom="20dp"
                 android:rotation="180"
                 android:src="@drawable/ic_chevron_left"
@@ -135,6 +136,7 @@
             android:clipChildren="false">
 
             <club.cred.synth.views.ElevatedView
+                android:id="@+id/kyc"
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
                 android:layout_marginStart="20dp"
@@ -156,8 +158,8 @@
                 android:layout_width="14dp"
                 android:layout_height="18dp"
                 android:layout_alignParentEnd="true"
-                android:layout_marginTop="34dp"
-                android:layout_marginEnd="30dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="40dp"
                 android:layout_marginBottom="20dp"
                 android:rotation="180"
                 android:src="@drawable/ic_chevron_left"
@@ -171,6 +173,7 @@
             android:clipChildren="false">
 
             <club.cred.synth.views.ElevatedView
+                android:id="@+id/er"
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
                 android:layout_marginStart="20dp"
@@ -192,8 +195,8 @@
                 android:layout_width="14dp"
                 android:layout_height="18dp"
                 android:layout_alignParentEnd="true"
-                android:layout_marginTop="34dp"
-                android:layout_marginEnd="30dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="40dp"
                 android:layout_marginBottom="20dp"
                 android:rotation="180"
                 android:src="@drawable/ic_chevron_left"
@@ -207,6 +210,7 @@
             android:clipChildren="false">
 
             <club.cred.synth.views.ElevatedView
+                android:id="@+id/team"
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
                 android:layout_marginStart="20dp"
@@ -228,8 +232,8 @@
                 android:layout_width="14dp"
                 android:layout_height="18dp"
                 android:layout_alignParentEnd="true"
-                android:layout_marginTop="34dp"
-                android:layout_marginEnd="30dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="40dp"
                 android:layout_marginBottom="20dp"
                 android:rotation="180"
                 android:src="@drawable/ic_chevron_left"

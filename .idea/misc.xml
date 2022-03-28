@@ -12,9 +12,17 @@
         <entry key="..\:/Gigs/app/src/main/res/drawable/button_tint.xml" value="0.1975" />
         <entry key="..\:/Gigs/app/src/main/res/drawable/dotted.xml" value="0.24375" />
         <entry key="..\:/Gigs/app/src/main/res/drawable/ic_wave.xml" value="0.2390194075587334" />
+        <entry key="..\:/Gigs/app/src/main/res/drawable/image_background.xml" value="0.1835" />
+        <entry key="..\:/Gigs/app/src/main/res/drawable/money.xml" value="0.191" />
         <entry key="..\:/Gigs/app/src/main/res/drawable/nav_item_color.xml" value="0.24375" />
+        <entry key="..\:/Gigs/app/src/main/res/drawable/person.xml" value="0.191" />
+        <entry key="..\:/Gigs/app/src/main/res/drawable/phone.xml" value="0.2055" />
+        <entry key="..\:/Gigs/app/src/main/res/drawable/shareImage_background.xml" value="0.197" />
+        <entry key="..\:/Gigs/app/src/main/res/drawable/wave__1.xml" value="0.1975" />
+        <entry key="..\:/Gigs/app/src/main/res/drawable/wave__2_.xml" value="0.1975" />
         <entry key="..\:/Gigs/app/src/main/res/layout-v23/activity_login_page.xml" value="0.2234375" />
         <entry key="..\:/Gigs/app/src/main/res/layout/activity_all_gigs.xml" value="0.18333333333333332" />
+        <entry key="..\:/Gigs/app/src/main/res/layout/activity_get_image.xml" value="0.18333333333333332" />
         <entry key="..\:/Gigs/app/src/main/res/layout/activity_gigs_details_screen.xml" value="0.176" />
         <entry key="..\:/Gigs/app/src/main/res/layout/activity_home_screen.xml" value="0.2" />
         <entry key="..\:/Gigs/app/src/main/res/layout/activity_kyc_screen.xml" value="0.264" />
@@ -30,7 +38,9 @@
         <entry key="..\:/Gigs/app/src/main/res/layout/header.xml" value="0.18333333333333332" />
         <entry key="..\:/Gigs/app/src/main/res/layout/otp_dialog.xml" value="0.2234375" />
         <entry key="..\:/Gigs/app/src/main/res/layout/scroll_buttons.xml" value="0.2234375" />
+        <entry key="..\:/Gigs/app/src/main/res/layout/shareimage.xml" value="0.18333333333333332" />
         <entry key="..\:/Gigs/app/src/main/res/menu/menu.xml" value="0.11666666666666667" />
+        <entry key="..\:/Gigs/app/src/main/res/mipmap-anydpi-v26/shareImage.xml" value="0.197" />
       </map>
     </option>
   </component>

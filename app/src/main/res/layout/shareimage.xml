@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cardview"
+    android:layout_width="match_parent"
+    android:layout_height="400dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:backgroundTint="@color/synth_color"
+    app:cardCornerRadius="8dp"
+    android:elevation="8dp">
+
+    <RelativeLayout
+        android:id="@+id/share_layout"
+        android:layout_width="350dp"
+        android:layout_height="400dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/image_back">
+
+<!--        <ImageView-->
+<!--            android:id="@+id/imageview"-->
+<!--            android:src="@drawable/image_back"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:scaleType="centerCrop"/>-->
+        <TextView
+            android:id="@+id/gig_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="Upstox Account"
+            android:textColor="@color/copper_text_color"
+            android:textSize="28sp" />
+
+        <ImageView
+            android:id="@+id/gigs_image"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_below="@id/gig_title"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/twitter" />
+
+        <TextView
+            android:id="@+id/gig_offer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/gig_title"
+            android:layout_marginTop="40dp"
+            android:layout_toEndOf="@id/gigs_image"
+            android:text="Share &amp;\nEarn upto 450rs"
+            android:textColor="@color/copper_text_color"
+            android:textSize="20sp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_below="@id/gigs_image"
+            android:layout_marginStart="50dp"
+            android:id="@+id/profile_image"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="@color/synth_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="50dp">
+
+            <ImageView
+                android:id="@+id/user_image"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/insta_logo"
+                android:scaleType="centerCrop"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/gig_offer"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="80dp"
+            android:layout_toEndOf="@id/profile_image"
+            android:text="Rohan Ramola"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/user_gigs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/user_name"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:layout_toEndOf="@id/profile_image"
+            android:text="Gigs Completed\n04"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

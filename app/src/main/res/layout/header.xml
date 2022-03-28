@@ -23,33 +23,41 @@
             android:background="@color/synth_color"
             android:clipChildren="false">
 
-            <club.cred.synth.views.SynthImageButton
+            <androidx.cardview.widget.CardView
                 android:id="@+id/profile_picture"
                 android:layout_width="100dp"
-                android:layout_height="80dp"
+                android:layout_height="100dp"
                 android:layout_marginStart="50dp"
-                android:layout_marginTop="25dp"
-                app:neuButtonType="elevated_soft"
-                app:srcCompat="@drawable/person">
+                android:backgroundTint="@color/copper_text_color_30"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="25dp"
+                app:cardCornerRadius="50dp">
 
-            </club.cred.synth.views.SynthImageButton>
+                <ImageView
+                    android:id="@+id/display_pic"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/person" />
+
+            </androidx.cardview.widget.CardView>
 
             <TextView
                 android:id="@+id/username"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="50dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
                 android:layout_toEndOf="@id/profile_picture"
                 android:text="Sarthak Goel"
                 android:textColor="@color/copper_text_color"
-                android:textSize="16sp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/username"
-                android:layout_marginStart="55dp"
+                android:layout_marginStart="30dp"
                 android:layout_marginTop="8dp"
                 android:layout_toEndOf="@id/profile_picture"
                 android:text="Code C67dfdf67"
@@ -75,9 +83,11 @@
         app:layout_constraintTop_toBottomOf="@id/profile_layout1" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        app:layout_constraintTop_toBottomOf="@id/share_button"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/share_button">
 
         <LinearLayout
             android:id="@+id/learn_layout1"
@@ -118,10 +128,10 @@
 
 
         <LinearLayout
-            app:layout_constraintTop_toBottomOf="@id/learn_layout1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/learn_layout1">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -129,6 +139,7 @@
                 android:clipChildren="false">
 
                 <club.cred.synth.views.ElevatedView
+                    android:id="@+id/share_earn"
                     android:layout_width="match_parent"
                     android:layout_height="45dp"
                     android:layout_marginStart="20dp"
@@ -163,6 +174,7 @@
                 android:clipChildren="false">
 
                 <club.cred.synth.views.ElevatedView
+                    android:id="@+id/earning_page"
                     android:layout_width="match_parent"
                     android:layout_height="45dp"
                     android:layout_marginStart="20dp"
@@ -197,6 +209,7 @@
                 android:clipChildren="false">
 
                 <club.cred.synth.views.ElevatedView
+                    android:id="@+id/kyc_page"
                     android:layout_width="match_parent"
                     android:layout_height="45dp"
                     android:layout_marginStart="20dp"
@@ -232,6 +245,7 @@
                 android:clipChildren="false">
 
                 <club.cred.synth.views.ElevatedView
+                    android:id="@+id/logOut"
                     android:layout_width="match_parent"
                     android:layout_height="45dp"
                     android:layout_marginStart="20dp"
@@ -259,7 +273,6 @@
                     android:src="@drawable/ic_chevron_left"
                     app:tint="@color/copper_text_color" />
             </RelativeLayout>
-
 
 
         </LinearLayout>

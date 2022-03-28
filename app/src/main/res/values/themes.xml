@@ -64,5 +64,10 @@
         <item name="android:windowExitAnimation">@anim/top_to_bottom</item>
     </style>
 
+    <style name="roundedImageViewRounded">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
 
     </resources>
