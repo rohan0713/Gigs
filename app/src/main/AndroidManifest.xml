@@ -27,13 +27,13 @@
             android:name=".kyc_Screen"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".login_page"
             android:exported="false" />
         <activity
             android:name=".gigs_details_screen"
             android:exported="false" />
         <activity
-            android:name=".login_page"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -57,6 +57,16 @@
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+
+        <service
+            android:name=".MyFirebaseInstanceIDService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+
     </application>
 
 </manifest>

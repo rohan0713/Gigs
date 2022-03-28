@@ -27,11 +27,13 @@
         <entry key="..\:/Gigs/app/src/main/res/layout/activity_home_screen.xml" value="0.2" />
         <entry key="..\:/Gigs/app/src/main/res/layout/activity_kyc_screen.xml" value="0.264" />
         <entry key="..\:/Gigs/app/src/main/res/layout/activity_login_page.xml" value="0.20555555555555555" />
+        <entry key="..\:/Gigs/app/src/main/res/layout/activity_main.xml" value="0.18333333333333332" />
         <entry key="..\:/Gigs/app/src/main/res/layout/activity_otp.xml" value="0.1" />
         <entry key="..\:/Gigs/app/src/main/res/layout/fragment_home_fragment.xml" value="0.2" />
         <entry key="..\:/Gigs/app/src/main/res/layout/fragment_leads_fragment.xml" value="0.18333333333333332" />
         <entry key="..\:/Gigs/app/src/main/res/layout/fragment_learn.xml" value="0.18333333333333332" />
         <entry key="..\:/Gigs/app/src/main/res/layout/fragment_money_fragment.xml" value="0.2234375" />
+        <entry key="..\:/Gigs/app/src/main/res/layout/fragment_payout.xml" value="0.18333333333333332" />
         <entry key="..\:/Gigs/app/src/main/res/layout/gigs_item.xml" value="0.264" />
         <entry key="..\:/Gigs/app/src/main/res/layout/gigs_recycler.xml" value="0.18333333333333332" />
         <entry key="..\:/Gigs/app/src/main/res/layout/gigs_type.xml" value="0.18333333333333332" />

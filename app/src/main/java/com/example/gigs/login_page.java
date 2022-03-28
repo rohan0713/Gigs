@@ -14,6 +14,7 @@ import android.os.CountDownTimer;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.view.Window;
@@ -35,6 +36,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthOptions;
 import com.google.firebase.auth.PhoneAuthProvider;
+import com.google.firebase.messaging.FirebaseMessaging;
 
 import java.util.concurrent.TimeUnit;
 
@@ -62,9 +64,33 @@ public class login_page extends AppCompatActivity {
         EditText mobile_number = findViewById(R.id.mobile_number);
         SynthButton button = findViewById(R.id.proceed);
 
+        FirebaseMessaging.getInstance().subscribeToTopic("gigs")
+                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        String msg = "hello";
+                        if(!task.isSuccessful()){
+                            msg = "no hello";
+                        }
+                    }
+                });
+
+
         button.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View view) {
+
+                FirebaseMessaging.getInstance().getToken().addOnCompleteListener(new OnCompleteListener<String>() {
+                    @Override
+                    public void onComplete(@NonNull Task<String> task) {
+                        if(task.isSuccessful()){
+                            String msg = task.getResult();
+                            Log.d("token", msg);
+                        }
+                    }
+                });
+
                 String phoneNumber = mobile_number.getText().toString().trim();
                 AlertDialog.Builder alert = new AlertDialog.Builder(login_page.this, R.style.MyAlertDialogTheme);
                 View v = getLayoutInflater().inflate(R.layout.otp_dialog, null);
@@ -105,7 +131,7 @@ public class login_page extends AppCompatActivity {
                 verify = v.findViewById(R.id.verify_otp);
                 auth = FirebaseAuth.getInstance();
                 pb = v.findViewById(R.id.progress_bar);
-//                verificationCode(phoneNumber);
+                verificationCode(phoneNumber);
 //                getVerification(code);
 
                 otp.requestFocus();
