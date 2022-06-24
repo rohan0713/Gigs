@@ -1,0 +1,85 @@
+{
+  "project_info": {
+    "project_number": "1044090240081",
+    "firebase_url": "https://gigs-6544d-default-rtdb.firebaseio.com",
+    "project_id": "gigs-6544d",
+    "storage_bucket": "gigs-6544d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1044090240081:android:5015547c8e768e470c0c70",
+        "android_client_info": {
+          "package_name": "com.example.gigs"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1044090240081-dbfgb2qrh11bj10vdr0p4kp6jt74tljf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDzUSZPZ87O1OpQWF8wAX-eAVWvs8LWBCw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1044090240081-dbfgb2qrh11bj10vdr0p4kp6jt74tljf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1044090240081:android:f3805b46db1be6310c0c70",
+        "android_client_info": {
+          "package_name": "com.financebazaar.gigs"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1044090240081-1lvnuirli8qohktnn3t8p3jsr5ltfs37.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.financebazaar.gigs",
+            "certificate_hash": "b61d67aa4627e02794ed0184ed8c90a14890545b"
+          }
+        },
+        {
+          "client_id": "1044090240081-m2bpc05vccn7h326qf2tui6lu8df4oe7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.financebazaar.gigs",
+            "certificate_hash": "d79df194c72c876088916179703aecebb3296426"
+          }
+        },
+        {
+          "client_id": "1044090240081-dbfgb2qrh11bj10vdr0p4kp6jt74tljf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDzUSZPZ87O1OpQWF8wAX-eAVWvs8LWBCw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1044090240081-dbfgb2qrh11bj10vdr0p4kp6jt74tljf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
