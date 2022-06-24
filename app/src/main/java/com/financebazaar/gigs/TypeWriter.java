@@ -1,13 +1,11 @@
-package com.example.gigs;
+package com.financebazaar.gigs;
 
 import android.content.Context;
 import android.util.AttributeSet;
-import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 
 import android.os.Handler;
-import java.util.logging.LogRecord;
 
 public class TypeWriter extends androidx.appcompat.widget.AppCompatTextView {
 
@@ -36,17 +34,12 @@ public class TypeWriter extends androidx.appcompat.widget.AppCompatTextView {
             }else{
                 myIndex = 0;
                 if(count == 0){
-                    myText = "Loans";
-                    delay = 300;
-                    count++;
-                }
-                else if(count == 1){
-                    myText = "Credit Cards";
-                    delay = 100;
+                    myText = "Taking Loans";
+                    delay = 200;
                     count++;
                 }
                 else{
-                    myText = "Saving Accounts";
+                    myText = "Opening Saving Accounts";
                     delay = 100;
                     count = 0;
                 }

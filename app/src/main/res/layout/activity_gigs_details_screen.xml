@@ -34,6 +34,7 @@
                 app:tint="@color/copper_text_color" />
 
             <TextView
+                android:id="@+id/gigName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -177,7 +178,7 @@
                             android:layout_centerHorizontal="true"
                             android:layout_toEndOf="@id/money"
                             android:fontFamily="sans-serif"
-                            android:text=" on every sale"
+                            android:text=" on this gig completion"
                             android:textColor="@color/copper_text_color"
                             android:textSize="16sp" />
 
@@ -188,7 +189,7 @@
 
                 <FrameLayout
                     android:layout_width="match_parent"
-                    android:layout_height="250dp"
+                    android:layout_height="wrap_content"
                     android:clipChildren="false">
 
                     <club.cred.synth.views.ElevatedView
@@ -197,7 +198,7 @@
                         android:layout_marginStart="20dp"
                         android:layout_marginTop="15dp"
                         android:layout_marginEnd="20dp"
-                        android:layout_marginBottom="5dp">
+                        android:layout_marginBottom="15dp">
 
                     </club.cred.synth.views.ElevatedView>
 
@@ -218,6 +219,7 @@
                             android:textSize="20sp" />
 
                         <TextView
+                            android:id="@+id/steps"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_below="@id/terms"
@@ -235,7 +237,7 @@
 
                 <FrameLayout
                     android:layout_width="match_parent"
-                    android:layout_height="300dp"
+                    android:layout_height="wrap_content"
                     android:clipChildren="false">
 
                     <club.cred.synth.views.ElevatedView
@@ -244,7 +246,7 @@
                         android:layout_marginStart="20dp"
                         android:layout_marginTop="15dp"
                         android:layout_marginEnd="20dp"
-                        android:layout_marginBottom="5dp">
+                        android:layout_marginBottom="15dp">
 
                     </club.cred.synth.views.ElevatedView>
 
@@ -266,6 +268,7 @@
 
 
                         <TextView
+                            android:id="@+id/terms_c"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_below="@id/tc"
@@ -287,10 +290,10 @@
 
     </LinearLayout>
 
-    <RelativeLayout
+    <LinearLayout
 
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="90dp"
         android:background="@color/synth_color"
         android:clipChildren="false"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -299,30 +302,31 @@
 
         <club.cred.synth.views.SynthButton
             android:id="@+id/share_others"
-            android:layout_width="150dp"
-            android:layout_height="46dp"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="20dp"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:gravity="center"
-            android:text="Share to others"
+            android:text="Share to others &amp;\nEarn rs1"
             android:textColor="@color/copper_text_color"
             android:textSize="15sp" />
 
         <club.cred.synth.views.SynthButton
-            android:layout_toEndOf="@+id/share_others"
-            android:layout_width="150dp"
-            android:layout_height="46dp"
+            android:id="@+id/do_it_yourself"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
             android:layout_marginStart="20dp"
-            android:layout_centerHorizontal="true"
             android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
             android:layout_marginBottom="10dp"
-            android:layout_marginEnd="40dp"
             android:gravity="center"
             android:text="Do it yourself"
             android:textColor="@color/copper_text_color"
             android:textSize="15sp" />
 
-    </RelativeLayout>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

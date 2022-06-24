@@ -14,10 +14,6 @@
         <!-- Customize your theme here. -->
     </style>
 
-    <style name="MyAlertDialogTheme" parent="Base.Theme.AppCompat.Light.Dialog.Alert">
-        <item name="windowFixedWidthMajor">90%</item>
-        <item name="windowFixedWidthMinor">90%</item>
-    </style>
 
     <style name="Theme.Synth" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/synth_color</item>
@@ -66,8 +62,7 @@
 
     <style name="roundedImageViewRounded">
         <item name="cornerFamily">rounded</item>
-        <item name="cornerSize">50%</item>
+        <item name="cornerSize">49%</item>
     </style>
-
 
     </resources>

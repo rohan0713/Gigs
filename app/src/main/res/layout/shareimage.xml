@@ -15,12 +15,6 @@
         android:layout_margin="20dp"
         android:background="@drawable/image_back">
 
-<!--        <ImageView-->
-<!--            android:id="@+id/imageview"-->
-<!--            android:src="@drawable/image_back"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="match_parent"-->
-<!--            android:scaleType="centerCrop"/>-->
         <TextView
             android:id="@+id/gig_title"
             android:layout_width="match_parent"
@@ -65,7 +59,7 @@
                 android:id="@+id/user_image"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/insta_logo"
+                android:src="@mipmap/insta_logo"
                 android:scaleType="centerCrop"/>
 
         </androidx.cardview.widget.CardView>

@@ -1,8 +1,9 @@
-package com.example.gigs;
+package com.financebazaar.gigs;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.WindowManager;
@@ -19,9 +20,16 @@ public class MainActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent i=new Intent(MainActivity.this , login_page.class);
-                startActivity(i);
-                finish();
+//                userHelperClass.clear(MainActivity.this);
+                if (userHelperClass.contains(MainActivity.this,"token")) {
+                    Intent i = new Intent(MainActivity.this, home_screen.class);
+                    startActivity(i);
+                    finish();
+                } else {
+                    Intent i = new Intent(MainActivity.this, login_page.class);
+                    startActivity(i);
+                    finish();
+                }
             }
         }, SPLASH_SCREEN_TIME_OUT);
     }

@@ -25,19 +25,20 @@
        android:elevation="5dp"
        android:id="@+id/header"
        android:layout_width="match_parent"
-       android:layout_height="70dp"
+       android:layout_height="80dp"
        app:layout_constraintTop_toTopOf="parent"
+       android:clipChildren="false"
        app:layout_constraintBottom_toTopOf="@id/scrollView"
        android:background="@color/synth_color">
 
-       <ImageView
+       <club.cred.synth.views.SynthImageButton
            android:id="@+id/profile"
            android:layout_width="30dp"
-           android:layout_height="40dp"
-           android:layout_centerVertical="true"
-           android:layout_marginStart="15dp"
+           android:layout_height="30dp"
+           android:layout_marginStart="20dp"
+           android:layout_marginTop="28dp"
            android:elevation="5dp"
-           android:src="@drawable/person"
+           android:src="@drawable/menu_button"
            app:tint="#ba8672" />
 
        <TextView
@@ -50,7 +51,7 @@
            android:fontFamily="sans-serif"
            android:text="Hi"
            android:textColor="@color/copper_text_color"
-           android:textSize="24sp" />
+           android:textSize="22sp" />
 
        <TextView
            android:id="@+id/username"
@@ -62,16 +63,27 @@
            android:fontFamily="sans-serif"
            android:text="Sarthak!"
            android:textColor="@color/copper_text_color"
-           android:textSize="24sp" />
+           android:textSize="22sp" />
 
-       <ImageView
+       <TextView
+           android:id="@+id/genuine"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_below="@id/hi"
+           android:layout_alignStart="@id/hi"
+           android:fontFamily="sans-serif"
+           android:text="Genuine User"
+           android:textColor="@color/white"
+           android:textSize="12sp" />
+
+       <club.cred.synth.views.SynthImageButton
            android:id="@+id/notify_image"
            android:layout_width="30dp"
-           android:layout_height="40dp"
+           android:layout_height="30dp"
            android:layout_alignParentEnd="true"
-           android:layout_centerVertical="true"
-           android:layout_marginEnd="15dp"
-           android:src="@drawable/notification"
+           android:layout_marginTop="28dp"
+           android:layout_marginEnd="25dp"
+           android:src="@drawable/settings"
            app:tint="#ba8672" />
    </RelativeLayout>
 
@@ -119,6 +131,16 @@
                         android:textColor="@color/synth_color"
                         android:textSize="20sp" />
 
+                    <com.github.ybq.android.spinkit.SpinKitView
+                        android:id="@+id/progress_bar1"
+                        style="@style/SpinKitView.ThreeBounce"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_below="@id/bal"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginTop="3dp"
+                        app:SpinKit_Color="@color/synth_color" />
+
                     <TextView
                         android:id="@+id/balance"
                         android:layout_width="wrap_content"
@@ -126,11 +148,11 @@
                         android:layout_below="@id/bal"
                         android:layout_marginStart="25dp"
                         android:fontFamily="@font/acme"
-                        android:text="₹ 0.00"
                         android:textColor="@color/synth_color"
                         android:textSize="18sp" />
 
                     <club.cred.synth.views.SynthButton
+                        android:id="@+id/share_button_home"
                         android:layout_width="130dp"
                         android:layout_height="40dp"
                         android:layout_alignParentEnd="true"
@@ -168,7 +190,19 @@
                         android:textColor="@color/synth_color"
                         android:textSize="18sp" />
 
+                    <com.github.ybq.android.spinkit.SpinKitView
+                        android:id="@+id/progress_bar2"
+                        style="@style/SpinKitView.ThreeBounce"
+                        app:SpinKit_Color="@color/synth_color"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_below="@id/dotted_line"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="35dp" />
+
                     <TextView
+                        android:id="@+id/gigs_completed"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/dotted_line"
@@ -176,7 +210,6 @@
                         android:layout_marginTop="12dp"
                         android:layout_marginEnd="35dp"
                         android:fontFamily="@font/acme"
-                        android:text="05"
                         android:textColor="@color/synth_color"
                         android:textSize="20sp" />
 
@@ -194,6 +227,7 @@
                 app:layout_constraintTop_toBottomOf="@id/linear">
 
                 <club.cred.synth.views.SynthButton
+                    android:id="@+id/telegram"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_marginStart="30dp"
@@ -201,25 +235,46 @@
                     android:layout_marginEnd="30dp"
                     android:layout_marginBottom="15dp"
                     android:gravity="center"
+                    app:neuPlatformColor="#2aa1db"
                     android:text="JOIN US ON TELEGRAM CHANNEL"
-                    android:textColor="@color/copper_text_color" />
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold"/>
 
                 <TextView
+                    android:id="@+id/gigsText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="30dp"
+                    android:layout_marginStart="20dp"
                     android:text="Gigs"
                     android:textColor="@color/copper_text_color"
                     android:textSize="24sp" />
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/gigs"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                <RelativeLayout
                     android:layout_marginTop="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginBottom="?attr/actionBarSize"
-                    tools:listitem="@layout/gigs_item" />
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.github.ybq.android.spinkit.SpinKitView
+                        android:id="@+id/recycle_progress"
+                        android:layout_centerHorizontal="true"
+                        style="@style/SpinKitView.FadingCircle"
+                        app:SpinKit_Color="@color/copper_text_color"
+                        android:layout_marginTop="80dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/gigs"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="?attr/actionBarSize"
+                        tools:listitem="@layout/gigs_item" />
+
+                </RelativeLayout>
 
             </LinearLayout>
 

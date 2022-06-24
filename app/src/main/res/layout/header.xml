@@ -37,8 +37,7 @@
                     android:id="@+id/display_pic"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/person" />
+                    android:src="@mipmap/load" />
 
             </androidx.cardview.widget.CardView>
 
@@ -51,18 +50,18 @@
                 android:layout_toEndOf="@id/profile_picture"
                 android:text="Sarthak Goel"
                 android:textColor="@color/copper_text_color"
-                android:textSize="20sp" />
+                android:textSize="24sp" />
 
             <TextView
+                android:id="@+id/code"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/username"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="2dp"
                 android:layout_toEndOf="@id/profile_picture"
-                android:text="Code C67dfdf67"
-                android:textColor="@color/copper_text_color"
-                android:textSize="12sp" />
+                android:textColor="@color/white"
+                android:textSize="11sp" />
 
 
         </RelativeLayout>
@@ -82,200 +81,209 @@
         android:textSize="20sp"
         app:layout_constraintTop_toBottomOf="@id/profile_layout1" />
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/share_button">
 
-        <LinearLayout
-            android:id="@+id/learn_layout1"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:layout_marginStart="5dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="5dp"
-            android:clipChildren="false"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <club.cred.synth.views.SynthButton
-                android:layout_width="100dp"
-                android:layout_height="30dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="25dp"
-                android:background="@drawable/button_tint"
-                android:gravity="center"
-                android:text="TOP FAQ"
-                android:textColor="@color/white"
-                android:textSize="12sp" />
-
-
-            <club.cred.synth.views.SynthButton
-                android:layout_width="100dp"
-                android:layout_height="30dp"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="25dp"
-                android:background="@drawable/button_tint"
-                android:gravity="center"
-                android:text="About Us"
-                android:textColor="@color/white"
-                android:textSize="12sp" />
-
-        </LinearLayout>
-
-
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintTop_toBottomOf="@id/learn_layout1">
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
 
-            <RelativeLayout
+            <LinearLayout
+                android:id="@+id/learn_layout1"
                 android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:clipChildren="false">
+                android:layout_height="80dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="5dp"
+                android:clipChildren="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
-                <club.cred.synth.views.ElevatedView
-                    android:id="@+id/share_earn"
-                    android:layout_width="match_parent"
-                    android:layout_height="45dp"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginEnd="20dp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="50dp"
-                    android:layout_marginTop="30dp"
-                    android:layout_marginBottom="20dp"
-                    android:text="Share &amp; earn"
+                <club.cred.synth.views.SynthButton
+                    android:id="@+id/faq"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="25dp"
+                    android:background="@drawable/button_tint"
+                    android:gravity="center"
+                    android:text="TOP FAQ"
                     android:textColor="@color/white"
-                    android:textSize="16sp" />
+                    android:textSize="12sp" />
 
-                <ImageView
-                    android:layout_width="14dp"
-                    android:layout_height="18dp"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginTop="38dp"
-                    android:layout_marginEnd="30dp"
-                    android:layout_marginBottom="20dp"
-                    android:rotation="180"
-                    android:src="@drawable/ic_chevron_left"
-                    app:tint="@color/copper_text_color" />
-            </RelativeLayout>
 
-            <RelativeLayout
+                <club.cred.synth.views.SynthButton
+                    android:id="@+id/about_us"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="25dp"
+                    android:background="@drawable/button_tint"
+                    android:gravity="center"
+                    android:text="About Us"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:clipChildren="false">
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/learn_layout1">
 
-                <club.cred.synth.views.ElevatedView
-                    android:id="@+id/earning_page"
+                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="45dp"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginEnd="20dp" />
+                    android:layout_height="70dp"
+                    android:clipChildren="false">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="50dp"
-                    android:layout_marginTop="30dp"
-                    android:layout_marginBottom="20dp"
-                    android:text="Earnings"
-                    android:textColor="@color/white"
-                    android:textSize="16sp" />
+                    <club.cred.synth.views.ElevatedView
+                        android:id="@+id/share_earn"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="20dp" />
 
-                <ImageView
-                    android:layout_width="14dp"
-                    android:layout_height="18dp"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginTop="38dp"
-                    android:layout_marginEnd="30dp"
-                    android:layout_marginBottom="20dp"
-                    android:rotation="180"
-                    android:src="@drawable/ic_chevron_left"
-                    app:tint="@color/copper_text_color" />
-            </RelativeLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="50dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginBottom="20dp"
+                        android:text="Tickets"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:clipChildren="false">
+                    <ImageView
+                        android:layout_width="14dp"
+                        android:layout_height="18dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="38dp"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginBottom="20dp"
+                        android:rotation="180"
+                        android:src="@drawable/ic_chevron_left"
+                        app:tint="@color/copper_text_color" />
+                </RelativeLayout>
 
-                <club.cred.synth.views.ElevatedView
-                    android:id="@+id/kyc_page"
+                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="45dp"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginEnd="20dp" />
+                    android:layout_height="70dp"
+                    android:clipChildren="false">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="50dp"
-                    android:layout_marginTop="30dp"
-                    android:layout_marginBottom="20dp"
-                    android:text="KYC details"
-                    android:textColor="@color/white"
-                    android:textSize="16sp" />
+                    <club.cred.synth.views.ElevatedView
+                        android:id="@+id/earning_page"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="20dp" />
 
-                <ImageView
-                    android:layout_width="14dp"
-                    android:layout_height="18dp"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginTop="38dp"
-                    android:layout_marginEnd="30dp"
-                    android:layout_marginBottom="20dp"
-                    android:rotation="180"
-                    android:src="@drawable/ic_chevron_left"
-                    app:tint="@color/copper_text_color" />
-            </RelativeLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="50dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginBottom="20dp"
+                        android:text="Earnings"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
 
+                    <ImageView
+                        android:layout_width="14dp"
+                        android:layout_height="18dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="38dp"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginBottom="20dp"
+                        android:rotation="180"
+                        android:src="@drawable/ic_chevron_left"
+                        app:tint="@color/copper_text_color" />
+                </RelativeLayout>
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:clipChildren="false">
-
-                <club.cred.synth.views.ElevatedView
-                    android:id="@+id/logOut"
+                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="45dp"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginEnd="20dp" />
+                    android:layout_height="70dp"
+                    android:clipChildren="false">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="50dp"
-                    android:layout_marginTop="30dp"
-                    android:layout_marginBottom="20dp"
-                    android:text="Log Out"
-                    android:textColor="@color/white"
-                    android:textSize="16sp" />
+                    <club.cred.synth.views.ElevatedView
+                        android:id="@+id/kyc_page"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="20dp" />
 
-                <ImageView
-                    android:layout_width="14dp"
-                    android:layout_height="18dp"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginTop="38dp"
-                    android:layout_marginEnd="30dp"
-                    android:layout_marginBottom="20dp"
-                    android:rotation="180"
-                    android:src="@drawable/ic_chevron_left"
-                    app:tint="@color/copper_text_color" />
-            </RelativeLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="50dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginBottom="20dp"
+                        android:text="KYC details"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="14dp"
+                        android:layout_height="18dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="38dp"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginBottom="20dp"
+                        android:rotation="180"
+                        android:src="@drawable/ic_chevron_left"
+                        app:tint="@color/copper_text_color" />
+                </RelativeLayout>
 
 
-        </LinearLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:clipChildren="false">
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+                    <club.cred.synth.views.ElevatedView
+                        android:id="@+id/logOut"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="20dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="50dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginBottom="20dp"
+                        android:text="Log Out"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="14dp"
+                        android:layout_height="18dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="38dp"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginBottom="20dp"
+                        android:rotation="180"
+                        android:src="@drawable/ic_chevron_left"
+                        app:tint="@color/copper_text_color" />
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

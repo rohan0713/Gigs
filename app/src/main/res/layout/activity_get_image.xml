@@ -5,18 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:backgroundTint="@color/synth_color"
-    android:elevation="8dp"
-    app:cardCornerRadius="8dp"
     tools:context=".getImage">
 
     <RelativeLayout
+        android:layout_marginTop="10dp"
         android:id="@+id/share_layout"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:clickable="true"
         android:clipChildren="false"
         android:onClick="screenshot"
-        tools:ignore="OnClick">
+        tools:ignore="OnClick"
+        android:focusable="true">
 
         <TextView
             android:id="@+id/gig_title"
@@ -53,7 +53,7 @@
                 android:layout_height="80dp"
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="30dp"
-                android:src="@drawable/twitter" />
+                tools:src="@drawable/twitter" />
 
             <TextView
                 android:id="@+id/gig_offer"
@@ -64,76 +64,164 @@
                 android:layout_toEndOf="@id/gigs_image"
                 android:text="Share &amp; Earn\n upto 450rs"
                 android:textColor="@color/copper_text_color"
-                android:textSize="20sp" />
+                android:textSize="16sp" />
+
+            <club.cred.synth.views.ElevatedView
+                android:id="@+id/elevatedz"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_below="@id/elevatedf"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="10dp"/>
+
+            <RelativeLayout
+                android:layout_below="@id/elevatedf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/gig_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginTop="35dp"
+                    android:text="Any User who complete this gig earn"
+                    android:textColor="@color/copper_text_color"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/gigs_earn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="35dp"
+                    android:layout_marginEnd="35dp"
+                    android:layout_marginStart="5dp"
+                    android:text="Rs 400"
+                    android:layout_toEndOf="@id/gig_info"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/gig_also"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="35dp"
+                    android:layout_below="@id/gig_info"
+                    android:text="And also"
+                    android:textColor="@color/copper_text_color"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/gigs_refer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="5dp"
+                    android:text="Rs 400"
+                    android:layout_below="@id/gig_info"
+                    android:layout_toEndOf="@id/gig_also"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/gigs_sh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="5dp"
+                    android:text="by sharing to others"
+                    android:layout_below="@id/gigs_earn"
+                    android:layout_toEndOf="@id/gigs_refer"
+                    android:textColor="@color/copper_text_color"
+                    android:textSize="16sp" />
+
+
+
+            </RelativeLayout>
 
             <club.cred.synth.views.ElevatedView
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:layout_below="@id/elevatedf"
+                android:layout_height="130dp"
+                android:layout_below="@id/elevatedz"
                 android:layout_marginStart="15dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginEnd="15dp" />
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/profile_image"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/gigs_image"
-                android:layout_marginStart="50dp"
-                android:layout_marginTop="60dp"
-                android:layout_marginBottom="10dp"
-                android:backgroundTint="@color/copper_text_color_30"
-                app:cardCornerRadius="50dp">
+            <RelativeLayout
+                android:layout_below="@id/elevatedz"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-                <ImageView
+                <com.google.android.material.imageview.ShapeableImageView
                     android:id="@+id/user_image"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/person" />
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@color/copper_text_color_30"
+                    android:src="@drawable/person"
+                    app:shapeAppearanceOverlay="@style/roundedImageViewRounded"
+                    app:strokeColor="@color/copper_text_color_30"
+                    app:strokeWidth="2dp" />
 
-            </androidx.cardview.widget.CardView>
+                <TextView
+                    android:id="@+id/user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_toEndOf="@id/user_image"
+                    android:text="Sarthak Goel"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
 
-            <TextView
-                android:id="@+id/user_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/gig_offer"
-                android:layout_marginStart="50dp"
-                android:layout_marginTop="80dp"
-                android:layout_toEndOf="@id/profile_image"
-                android:text="Sarthak Goel"
-                android:textColor="@color/white"
-                android:textSize="16sp" />
+                <com.github.ybq.android.spinkit.SpinKitView
+                    android:id="@+id/progress_bar"
+                    style="@style/SpinKitView.ThreeBounce"
+                    app:SpinKit_Color="@color/copper_text_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/user_name"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_toEndOf="@id/user_image"
+                    />
 
-            <TextView
-                android:id="@+id/user_gigs"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/user_name"
-                android:layout_marginStart="50dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="20dp"
-                android:layout_toEndOf="@id/profile_image"
-                android:text="Gigs Completed:- 04"
-                android:textColor="@color/white"
-                android:textSize="16sp" />
+                <TextView
+                    android:id="@+id/user_gigs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/user_name"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_toEndOf="@id/user_image"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
 
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/user_gigs"
-                android:layout_marginStart="50dp"
-                android:layout_marginTop="5dp"
-                android:text="Total money earned until now: ₹ 400 "
-                android:textColor="@color/copper_text_color"
-                android:textSize="16sp" />
+                <TextView
+                    android:id="@+id/total_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/user_gigs"
+                    android:layout_alignStart="@id/user_gigs"
+                    android:textColor="@color/copper_text_color"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
         </RelativeLayout>
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="90dp"
+            android:scaleType="centerCrop"
             android:layout_alignParentBottom="true"
             android:src="@drawable/wave__1" />
     </RelativeLayout>

@@ -1,4 +1,4 @@
-package com.example.gigs;
+package com.financebazaar.gigs;
 
 import org.junit.Test;
 

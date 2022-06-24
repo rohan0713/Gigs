@@ -1,4 +1,4 @@
-package com.example.gigs;
+package com.financebazaar.gigs;
 
 import android.content.Context;
 

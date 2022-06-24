@@ -33,28 +33,29 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_marginStart="35dp"
-                android:text="Earning by Selling"
+                android:text="Earning by"
                 android:textColor="@color/white"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
-            <com.example.gigs.TypeWriter
+            <com.financebazaar.gigs.TypeWriter
                 android:id="@+id/animatedText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/earn"
                 android:layout_marginStart="35dp"
                 android:fontFamily="@font/alatsi"
-                android:text="Saving Accounts"
+                android:text="Opening Saving Accounts"
                 android:textColor="@color/copper_text_color"
-                android:textSize="34sp" />
+                android:textSize="24sp" />
 
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_alignParentBottom="true"
                 android:layout_height="90dp"
+                android:layout_alignParentBottom="true"
                 android:layout_marginTop="80dp"
                 android:layout_marginBottom="0dp"
+                android:scaleType="centerCrop"
                 android:src="@drawable/ic_wave" />
 
         </RelativeLayout>
@@ -84,37 +85,48 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/text1" />
 
-    <EditText
-        android:id="@+id/mobile_number"
-        android:inputType="phone"
-        android:layout_width="250dp"
-        android:layout_height="60dp"
-        android:importantForAutofill="no"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="15dp"
-        android:drawableStart="@drawable/phone"
-        android:drawablePadding="20dp"
-        android:cursorVisible="true"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/text2" >
-        <requestFocus/>
-    </EditText>
+        app:layout_constraintTop_toBottomOf="@id/text2">
 
-    <club.cred.synth.views.SynthButton
-        android:id="@+id/proceed"
-        android:layout_width="80dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginStart="5dp"
-        app:layout_constraintStart_toEndOf="@id/mobile_number"
-        app:layout_constraintTop_toBottomOf="@id/text2"
-        app:neuButtonType="elevated_soft"
-        android:text="Confirm"
-        android:textSize="14sp"
-        android:gravity="center"
-        android:textColor="@color/copper_text_color"
+        <EditText
+            android:id="@+id/mobile_number"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="30dp"
+            android:layout_weight="3"
+            android:cursorVisible="true"
+            android:drawableStart="@drawable/phone"
+            android:drawablePadding="20dp"
+            android:importantForAutofill="no"
+            android:inputType="phone"
+            app:layout_constraintStart_toStartOf="parent">
 
-        app:neuPlatformAppearance="@style/elevatedFlat_blueButton"/>
+            <requestFocus />
+        </EditText>
 
+        <club.cred.synth.views.SynthButton
+            android:id="@+id/proceed"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Confirm"
+            android:textColor="@color/copper_text_color"
+            android:textSize="14sp"
+            app:neuButtonType="elevated_soft"
+            app:neuPlatformAppearance="@style/elevatedFlat_blueButton" />
+
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

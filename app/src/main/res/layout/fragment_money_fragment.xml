@@ -14,48 +14,18 @@
         app:layout_constraintTop_toTopOf="parent"
         android:background="@color/synth_color">
 
-        <ImageView
-            android:id="@+id/profile"
-            android:layout_width="30dp"
-            android:layout_height="40dp"
-            android:layout_centerVertical="true"
-            android:layout_marginStart="15dp"
-            android:elevation="5dp"
-            android:src="@drawable/person"
-            app:tint="#ba8672" />
-
         <TextView
             android:id="@+id/hi"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginStart="25dp"
-            android:layout_toEndOf="@id/profile"
             android:fontFamily="sans-serif"
-            android:text="Hi"
+            android:text="Earnings"
             android:textColor="@color/copper_text_color"
             android:textSize="24sp" />
 
-        <TextView
-            android:id="@+id/username"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginStart="7dp"
-            android:layout_toEndOf="@id/hi"
-            android:fontFamily="sans-serif"
-            android:text="Sarthak!"
-            android:textColor="@color/copper_text_color"
-            android:textSize="24sp" />
 
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="40dp"
-            android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true"
-            android:layout_marginEnd="15dp"
-            android:src="@drawable/notification"
-            app:tint="#ba8672" />
     </RelativeLayout>
 
     <LinearLayout
@@ -96,11 +66,21 @@
                 android:layout_below="@id/bal"
                 android:layout_marginStart="25dp"
                 android:fontFamily="@font/acme"
-                android:text="₹ 0.00"
                 android:textColor="@color/synth_color"
                 android:textSize="18sp" />
 
+            <com.github.ybq.android.spinkit.SpinKitView
+                android:id="@+id/progress_bar1"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                style="@style/SpinKitView.ThreeBounce"
+                android:layout_below="@id/bal"
+                app:SpinKit_Color="@color/synth_color"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="3dp" />
+
             <club.cred.synth.views.SynthButton
+                android:id="@+id/share_button_money"
                 android:layout_width="130dp"
                 android:layout_height="40dp"
                 android:layout_alignParentEnd="true"
@@ -138,7 +118,19 @@
                 android:textColor="@color/synth_color"
                 android:textSize="20sp" />
 
+            <com.github.ybq.android.spinkit.SpinKitView
+                android:id="@+id/progress_bar2"
+                style="@style/SpinKitView.ThreeBounce"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                app:SpinKit_Color="@color/synth_color"
+                android:layout_below="@id/dotted_line"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="35dp" />
+
             <TextView
+                android:id="@+id/gigs_completed"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/dotted_line"
@@ -146,7 +138,6 @@
                 android:layout_marginTop="12dp"
                 android:layout_marginEnd="35dp"
                 android:fontFamily="@font/acme"
-                android:text="05"
                 android:textColor="@color/synth_color"
                 android:textSize="18sp" />
 
@@ -154,64 +145,54 @@
 
     </LinearLayout>
 
-    <FrameLayout
-        android:id="@+id/mon_container"
+    <com.google.android.material.tabs.TabLayout
+        android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:clipChildren="false"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/linear">
+        app:layout_constraintTop_toBottomOf="@id/linear"
+        android:background="@color/synth_color"
+        app:tabTextColor="#FFFFFF"
+        app:tabMinWidth="120dp"
+        app:tabSelectedTextColor="@color/copper_text_color"
+        app:tabIndicatorColor="@color/copper_text_color"
+        app:tabMaxWidth="130dp"
+        android:id="@+id/tabLayout">
 
-        <club.cred.synth.views.ElevatedView
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:layout_margin="20dp" />
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/payout"
+            android:text="Payout" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/refer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="On Hold" />
 
-            <TextView
-                android:id="@+id/payout"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="40dp"
-                android:text="Payout"
-                android:textColor="@color/white"
-                android:textSize="16sp" />
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/history"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="History" />
 
-            <TextView
-                android:id="@+id/referrals"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="70dp"
-                android:layout_marginTop="40dp"
-                android:text="Referrals"
-                android:textColor="@color/white"
-                android:textSize="16sp" />
+    </com.google.android.material.tabs.TabLayout>
 
-            <TextView
-                android:id="@+id/history"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="80dp"
-                android:layout_marginTop="40dp"
-                android:fontFamily="sans-serif"
-                android:text="History"
-                android:textColor="@color/white"
-                android:textSize="16sp" />
-
-        </LinearLayout>
-    </FrameLayout>
-
-    <FrameLayout
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:id="@+id/frag_container"
-        app:layout_constraintTop_toBottomOf="@id/mon_container"
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tabLayout" />
+
+<!--    <FrameLayout-->
+<!--        android:id="@+id/fragment_money"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/tabLayout" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

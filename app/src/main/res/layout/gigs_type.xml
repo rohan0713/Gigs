@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:theme="@style/Theme.Gigs">
 
     <RelativeLayout
-        app:layout_constraintTop_toTopOf="parent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="?attr/actionBarSize">
+        android:layout_marginBottom="?attr/actionBarSize"
+        app:layout_constraintTop_toTopOf="parent">
 
         <RelativeLayout
             android:id="@+id/gigs1"
@@ -25,13 +25,13 @@
                 android:layout_marginStart="15dp"
                 android:layout_marginTop="30dp"
                 android:layout_marginEnd="15dp"
-                android:layout_marginBottom="20dp"/>
+                android:layout_marginBottom="20dp" />
 
             <TextView
                 android:id="@+id/demat"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="65dp"
+                android:layout_centerHorizontal="true"
                 android:layout_marginTop="65dp"
                 android:text="DEMAT"
                 android:textColor="@color/copper_text_color"
@@ -42,7 +42,7 @@
                 android:layout_width="100dp"
                 android:layout_height="46dp"
                 android:layout_below="@id/demat"
-                android:layout_marginStart="50dp"
+                android:layout_centerHorizontal="true"
                 android:layout_marginTop="40dp"
                 android:gravity="center"
                 android:text="check now"
@@ -53,26 +53,26 @@
 
         <RelativeLayout
             android:id="@+id/gigs2"
-            android:layout_toEndOf="@id/gigs1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:clipChildren="false"
-            android:background="@color/synth_color">
+            android:layout_toEndOf="@id/gigs1"
+            android:background="@color/synth_color"
+            android:clipChildren="false">
 
             <club.cred.synth.views.ElevatedView
                 android:id="@+id/elevated2"
-                android:layout_width="170dp"
+                android:layout_width="match_parent"
                 android:layout_height="180dp"
                 android:layout_marginStart="15dp"
                 android:layout_marginTop="30dp"
                 android:layout_marginEnd="15dp"
-                android:layout_marginBottom="20dp"/>
+                android:layout_marginBottom="20dp" />
 
             <TextView
                 android:id="@+id/savings"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="55dp"
+                android:layout_centerHorizontal="true"
                 android:layout_marginTop="65dp"
                 android:text="SAVINGS"
                 android:textColor="@color/copper_text_color"
@@ -83,7 +83,7 @@
                 android:layout_width="100dp"
                 android:layout_height="46dp"
                 android:layout_below="@id/savings"
-                android:layout_marginStart="50dp"
+                android:layout_centerHorizontal="true"
                 android:layout_marginTop="40dp"
                 android:gravity="center"
                 android:text="check now"
@@ -113,9 +113,9 @@
                 android:id="@+id/credit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="65dp"
+                android:layout_centerHorizontal="true"
                 android:layout_marginTop="65dp"
-                android:text="CREDIT"
+                android:text="CRYPTO"
                 android:textColor="@color/copper_text_color"
                 android:textSize="20sp" />
 
@@ -124,7 +124,7 @@
                 android:layout_width="100dp"
                 android:layout_height="46dp"
                 android:layout_below="@id/credit"
-                android:layout_marginStart="50dp"
+                android:layout_centerHorizontal="true"
                 android:layout_marginTop="40dp"
                 android:gravity="center"
                 android:text="check now"
@@ -135,38 +135,38 @@
 
         <RelativeLayout
             android:id="@+id/gigs4"
-            android:layout_toEndOf="@id/gigs3"
-            android:layout_below="@id/gigs2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:clipChildren="false"
-            android:background="@color/synth_color">
+            android:layout_below="@id/gigs2"
+            android:layout_toEndOf="@id/gigs3"
+            android:background="@color/synth_color"
+            android:clipChildren="false">
 
             <club.cred.synth.views.ElevatedView
                 android:id="@+id/elevated4"
-                android:layout_width="170dp"
+                android:layout_width="match_parent"
                 android:layout_height="180dp"
                 android:layout_marginStart="15dp"
                 android:layout_marginTop="30dp"
                 android:layout_marginEnd="15dp"
-                android:layout_marginBottom="20dp"/>
+                android:layout_marginBottom="20dp" />
 
             <TextView
+                android:id="@+id/tax"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="ITR TAX"
-                android:id="@+id/tax"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="65dp"
+                android:text="GAMING"
                 android:textColor="@color/copper_text_color"
-                android:textSize="20sp"
-                android:layout_marginStart="60dp"
-                android:layout_marginTop="65dp"/>
+                android:textSize="20sp" />
 
             <club.cred.synth.views.SynthButton
                 android:id="@+id/itr_button"
                 android:layout_width="100dp"
                 android:layout_height="46dp"
                 android:layout_below="@id/tax"
-                android:layout_marginStart="50dp"
+                android:layout_centerHorizontal="true"
                 android:layout_marginTop="40dp"
                 android:gravity="center"
                 android:text="check now"
